@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python - Nishi Paul</title>
+  <link rel="stylesheet" href="css/ml.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Nishi Paul</div>
+    <nav class="nav-wrapper">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blogs</a>
+        <a href="skills.html">Skills</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Python Topics Section -->
+  <section class="ml-section">
+    <h1 class="section-title">Python Topics</h1>
+
+    <!-- Section 1 -->
+    <div class="ml-box">
+      <button class="collapsible">Basics to Intermediate concepts in Python<span class="arrow">&#9660;</span></button>
+      <div class="content">
+        <a href="python_blogs/beginner/part_1_introduction_to_python.html" target="_blank" class="row">1. Introduction to Python</a>
+        <a href="python_blogs/beginner/part_2_python_blog.html" target="_blank" class="row">2. Variable, List and Print Functions in Python</a>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="ml-box">
+      <button class="collapsible">Object Oriented Programming in Python <span class="arrow">&#9660;</span></button>
+      <div class="content">
+        <a href="python_blogs/oops/Part_1_Node.html" target="_blank" class="row">1. Detail on Node - the basic unit of OOP </a>
+        <a href="python_blogs/oops/Part_2_SinglyLinkedListFull.html" target="_blank" class="row">2. Singly Linked List Full </a>
+        <a href="python_blogs/oops/Part_3_DoublyLinkedListFull.html" target="_blank" class="row">3. Doubly Linked List Full </a>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-icons">
+      <a href="https://github.com/nishi-2" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/nishipaul" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your@email.com"> Email : nishi.paul.in@gmail.com<i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        const arrow = btn.querySelector(".arrow");
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          arrow.innerHTML = "&#9660;";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          arrow.innerHTML = "&#9650;";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
